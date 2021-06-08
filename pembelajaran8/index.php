@@ -23,9 +23,11 @@ $mahasiswa = query("SELECT * FROM mahasiswa");
 			<th>Jurusan</th>
 		</tr>
 
+		<?php $i = 1;	//untuk membuat angka berurut otomatis ?>
 		<?php foreach ($mahasiswa as $mhs) : ?>
+		
 		<tr>
-			<td>1</td>
+			<td><?= $i;  ?></td>
 			<td>
 				<a href="" style="color: yellow;">ubah |</a>
 				<a href="" style="color: red;">hapus</a>
@@ -39,6 +41,7 @@ $mahasiswa = query("SELECT * FROM mahasiswa");
 			<td><?= $mhs["jurusan"] ?></td>
 
 		</tr>
+		<?php $i++ ?>
 	<?php endforeach; ?>
 	</table>
 </body>
